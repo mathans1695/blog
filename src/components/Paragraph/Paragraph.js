@@ -9,6 +9,8 @@ function Paragraph(props) {
 	function handleSelect(e) {
 		const selection = document.getSelection();
 		
+		console.log(e.selectionStart);
+		
 		if (!selection.isCollapsed) {
 			const range = selection.getRangeAt(0).cloneRange();
 			
@@ -21,11 +23,11 @@ function Paragraph(props) {
 	return (
 		<div 
 			className='Paragraph'
+			onSelect={handleSelect}
+			contentEditable={true}
 		>
 			<p
 				className='Paragraph__text'
-				onSelect={handleSelect}
-				contentEditable={true}
 			>
 				{paraText}
 			</p>
@@ -47,7 +49,7 @@ function determinePosition(isSelected, range, { positionMenu, menuWidth }) {
 	const selectedTextWidth = textWidth(range.toString(), fontInfo);
 	
 	// position the menu using the calculated position
-	if (left < menuWidth/2) {
+	if (left <= menuWidth/2) {
 		left = left;
 	} else if (left + menuWidth/2 >= innerWidth) {
 		left = left - menuWidth;

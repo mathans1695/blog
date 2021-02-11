@@ -14,14 +14,18 @@
 	margin-bottom: 7.5px;
 	padding: 5px;
 	border-radius: 15px;
+	line-height: 1px;
 	
 	background-color: black;
+	
+	transition: all 0.4s;
 }
 
 .SubMenu__1, 
 .SubMenu__2 {
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 	
 	width: 50%;
 }
