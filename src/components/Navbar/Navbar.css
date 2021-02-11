@@ -1,6 +1,7 @@
 .Navbar {
 	width: 80%;
-	height: 20vh;
+	height: 10vh;
+	margin: 0 auto 28px;
+	
 	border: 1px solid black;
-	margin: 0 auto;
 }
