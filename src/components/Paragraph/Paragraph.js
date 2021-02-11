@@ -42,14 +42,14 @@ function determinePosition(isSelected, range, { positionMenu, menuWidth }) {
 	// get selected text width using the function textWidth
 	const fontInfo = {
 		family: "times new roman",
-		size: 20
+		size: 1.5 * 20
 	};
 	const selectedTextWidth = textWidth(range.toString(), fontInfo);
 	
 	// position the menu using the calculated position
 	if (left < menuWidth/2) {
 		left = left;
-	} else if (left + menuWidth/2 > innerWidth) {
+	} else if (left + menuWidth/2 >= innerWidth) {
 		left = left - menuWidth;
 	} else {
 		left = left - (menuWidth/2) + (selectedTextWidth/2);
@@ -72,7 +72,6 @@ function textWidth(text, fontInfo) {
 	span.style.height = "auto";
 	span.style.position = "absolute";
 	span.style.top = "-50px";
-	console.log(span);
 	
 	const width = span.clientWidth;
 	document.body.removeChild(span);
