@@ -1,13 +1,16 @@
 import React from 'react';
-import Navbar from './components/Navbar/Navbar';
-import Editor from './components/Editor/Editor';
+
+import DraftEditor from './components/DraftEditor/DraftEditor';
+
+import BoldButton from './components/BoldButton/BoldButton';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-		<Navbar />
-		<Editor />
+		<DraftEditor />
+		<BoldButton />
     </div>
   );
 }
