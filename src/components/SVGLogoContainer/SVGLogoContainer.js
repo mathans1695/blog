@@ -3,20 +3,20 @@ import React from 'react';
 import './SVGLogoContainer.css';
 
 function SVGLogoContainer(props) {
-	const { svg, isActive } = props;
+	const { svg, isActive, action } = props;
+	const className = (
+		isActive 
+			? 'SVGLogoContainer SVGLogoContainer__active' 
+			: 'SVGLogoContainer'
+	)
 	
 	return (
-		isActive
-			? (
-				<div className='SVGLogoContainer SVGLogoContainer__active'>
-					{ svg }
-				</div> 
-			)
-			: (
-				<div className='SVGLogoContainer'>
-					{ svg }
-				</div>
-			)
+		<div 
+			className={className}
+			data-action={action}
+		>
+			{ svg }
+		</div>
 	)
 }
 

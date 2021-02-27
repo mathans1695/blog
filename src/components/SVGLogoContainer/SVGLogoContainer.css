@@ -3,7 +3,7 @@
 	
 	width: 100%;
 	height: 100%;
-	padding: 2.5px;
+	padding: 3.75px;
 	
 	background-color: transparent;
 	
@@ -20,9 +20,22 @@
 
 .SVGLogoContainer__svg {
 	position: absolute;
-	top: 2.5px;
-	left: 2.5px;
+	top: 3.75px;
+	left: 3.75px;
 	
-	width: 10px;
-	height: 10px;
+	width: 17.5px;
+	height: 17.5px;
+	
+	pointer-events: none;
+}
+
+.SVGLogoContainer__smallsvg {
+	position: absolute;
+	top: 8.75px;
+	left: 5px;
+	
+	width: 12.5px;
+	height: 12.5px;
+	
+	pointer-events: none;
 }
