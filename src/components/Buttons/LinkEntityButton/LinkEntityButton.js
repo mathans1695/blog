@@ -33,6 +33,7 @@ class LinkEntityButton extends Component {
 					svg={link.svgsrc} 
 					isActive={this.state.isActive}
 					action='LINK'
+					toolbar="top"
 				/>
 			</button>
 		)

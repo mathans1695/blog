@@ -1,4 +1,4 @@
-.SVGLogoContainer {
+.TopToolbarStyle {
 	position: relative;
 	
 	width: 100%;
@@ -8,22 +8,22 @@
 	fill: white;
 }
 
-.SVGLogoContainer--bgWhite {
+.TopToolbarStyle--bgWhite {
 	border-radius: 5px;
 	
 	background-color: white;
 	fill: black;
 }
 
-.SVGLogoContainer__active {
+.TopToolbarStyle__active {
 	fill: rgba(173,255,47,0.9);
 }
 
-.SVGLogoContainer:hover {
+.TopToolbarStyle:hover {
 	cursor: pointer;
 }
 
-.SVGLogoContainer__svg {
+.TopToolbarStyle__svg {
 	position: absolute;
 	top: 3.75px;
 	left: 3.75px;
@@ -34,7 +34,7 @@
 	pointer-events: none;
 }
 
-.SVGLogoContainer__smallsvg {
+.TopToolbarStyle__smallsvg {
 	position: absolute;
 	top: 8.75px;
 	left: 5px;
