@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import SVGLogoContainer from '../SVGLogoContainer/SVGLogoContainer';
+import SVGLogoContainer from '../../Atoms/SVGLogoContainer/SVGLogoContainer';
 
-import { blockquote } from '../../assets/inlineSVG/inlineSVG';
+import { link } from '../../../assets/inlineSVG/inlineSVG';
 
-import './BlockQuoteButton.css';
+import './LinkEntityButton.css';
 
-class BlockQuoteButton extends Component {
+class LinkEntityButton extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -25,18 +25,18 @@ class BlockQuoteButton extends Component {
 	
 	render() {
 		return (
-			<button
-				className='BlockQuoteButton'
+			<button 
+				className='LinkEntityButton'
 				onClick={this.handleClick}
 			>
 				<SVGLogoContainer 
-					svg={blockquote.svgsrc}
+					svg={link.svgsrc} 
 					isActive={this.state.isActive}
-					action='blockquote'
+					action='LINK'
 				/>
 			</button>
 		)
 	}
 }
 
-export default BlockQuoteButton;
+export default LinkEntityButton;
