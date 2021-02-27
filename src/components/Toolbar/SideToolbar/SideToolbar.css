@@ -1,0 +1,13 @@
+.SideToolbar {
+	display: flex;
+	width: 47px;
+}
+
+.SideToolbar__opener {
+	width: 47px;
+}
+
+.SideToolbar__Menu {
+	display: flex;
+	width: 190px;
+}
