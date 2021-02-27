@@ -7,7 +7,7 @@ import {
 	CompositeDecorator
 } from 'draft-js';
 
-import StyleMenu from '.././StyleMenu/StyleMenu';
+import TopToolbar from '.././Toolbar/TopToolbar/TopToolbar';
 
 import './DraftEditor.css';
 
@@ -85,7 +85,7 @@ class DraftEditor extends Component {
 						ref={this.setDomEditorRef}
 					/>
 				</div>
-				<StyleMenu 
+				<TopToolbar 
 					toggleInlineStyle={this.toggleInlineStyle}
 				/>
 			</div>

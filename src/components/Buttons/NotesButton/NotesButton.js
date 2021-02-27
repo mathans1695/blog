@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import SVGLogoContainer from '../SVGLogoContainer/SVGLogoContainer';
+import SVGLogoContainer from '../../Atoms/SVGLogoContainer/SVGLogoContainer';
 
-import { heading_3 } from '../../assets/inlineSVG/inlineSVG';
+import { notes } from '../../../assets/inlineSVG/inlineSVG';
 
-import './HeadingButton3.css';
+import './NotesButton.css';
 
-class HeadingButton3 extends Component {
+class NotesButton extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -25,18 +25,19 @@ class HeadingButton3 extends Component {
 	
 	render() {
 		return (
-			<button 
-				className='HeadingButton3'
+			<button
+				className='NotesButton'
 				onClick={this.handleClick}
 			>
 				<SVGLogoContainer 
-					svg={heading_3.svgsrc}
+					svg={notes.svgsrc}
 					isActive={this.state.isActive}
-					action='heading-three'
+					action='notes'
+					addClass={true}
 				/>
 			</button>
 		)
 	}
 }
 
-export default HeadingButton3;
+export default NotesButton;

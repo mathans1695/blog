@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import SVGLogoContainer from '../SVGLogoContainer/SVGLogoContainer';
+import SVGLogoContainer from '../../Atoms/SVGLogoContainer/SVGLogoContainer';
 
-import { bold } from '../../assets/inlineSVG/inlineSVG';
+import { heading_4 } from '../../../assets/inlineSVG/inlineSVG';
 
-import './BoldButton.css';
+import './HeadingButton4.css';
 
-class BoldButton extends Component {
+class HeadingButton4 extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -18,7 +18,6 @@ class BoldButton extends Component {
 	handleClick(e) {
 		e.preventDefault();
 		
-		this.props.toggleInlineStyle(e);
 		this.setState({
 			isActive: !this.state.isActive
 		})
@@ -27,17 +26,17 @@ class BoldButton extends Component {
 	render() {
 		return (
 			<button 
-				className='BoldButton'
+				className='HeadingButton4'
 				onClick={this.handleClick}
 			>
 				<SVGLogoContainer 
-					svg={bold.svgsrc} 
+					svg={heading_4.svgsrc} 
 					isActive={this.state.isActive}
-					action='BOLD'
+					action='heading-four'
 				/>
 			</button>
 		)
 	}
 }
 
-export default BoldButton;
+export default HeadingButton4;

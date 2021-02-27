@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import SVGLogoContainer from '../SVGLogoContainer/SVGLogoContainer';
+import SVGLogoContainer from '../../Atoms/SVGLogoContainer/SVGLogoContainer';
 
-import { italic } from '../../assets/inlineSVG/inlineSVG';
+import { blockquote } from '../../../assets/inlineSVG/inlineSVG';
 
-import './ItalicButton.css';
+import './BlockQuoteButton.css';
 
-class ItalicButton extends Component {
+class BlockQuoteButton extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -18,7 +18,6 @@ class ItalicButton extends Component {
 	handleClick(e) {
 		e.preventDefault();
 		
-		this.props.toggleInlineStyle(e);
 		this.setState({
 			isActive: !this.state.isActive
 		})
@@ -26,18 +25,18 @@ class ItalicButton extends Component {
 	
 	render() {
 		return (
-			<button 
-				className='ItalicButton'
+			<button
+				className='BlockQuoteButton'
 				onClick={this.handleClick}
 			>
 				<SVGLogoContainer 
-					svg={italic.svgsrc} 
+					svg={blockquote.svgsrc}
 					isActive={this.state.isActive}
-					action='ITALIC'
+					action='blockquote'
 				/>
 			</button>
 		)
 	}
 }
 
-export default ItalicButton;
+export default BlockQuoteButton;

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import SVGLogoContainer from '../SVGLogoContainer/SVGLogoContainer';
+import SVGLogoContainer from '../../Atoms/SVGLogoContainer/SVGLogoContainer';
 
-import { link } from '../../assets/inlineSVG/inlineSVG';
+import { heading_3 } from '../../../assets/inlineSVG/inlineSVG';
 
-import './LinkEntityButton.css';
+import './HeadingButton3.css';
 
-class LinkEntityButton extends Component {
+class HeadingButton3 extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -26,17 +26,17 @@ class LinkEntityButton extends Component {
 	render() {
 		return (
 			<button 
-				className='LinkEntityButton'
+				className='HeadingButton3'
 				onClick={this.handleClick}
 			>
 				<SVGLogoContainer 
-					svg={link.svgsrc} 
+					svg={heading_3.svgsrc}
 					isActive={this.state.isActive}
-					action='LINK'
+					action='heading-three'
 				/>
 			</button>
 		)
 	}
 }
 
-export default LinkEntityButton;
+export default HeadingButton3;
