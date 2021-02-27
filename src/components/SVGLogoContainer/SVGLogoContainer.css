@@ -5,9 +5,14 @@
 	height: 100%;
 	padding: 3.75px;
 	
-	background-color: transparent;
-	
 	fill: white;
+}
+
+.SVGLogoContainer--bgWhite {
+	border-radius: 5px;
+	
+	background-color: white;
+	fill: black;
 }
 
 .SVGLogoContainer__active {

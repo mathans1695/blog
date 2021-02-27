@@ -6,6 +6,7 @@ import LinkEntityButton from '.././LinkEntityButton/LinkEntityButton';
 import HeadingButton4 from '.././HeadingButton4/HeadingButton4';
 import HeadingButton3 from '.././HeadingButton3/HeadingButton3';
 import BlockQuoteButton from '.././BlockQuoteButton/BlockQuoteButton';
+import NotesButton from '.././NotesButton/NotesButton';
 import VerticalDivider from '.././VerticalDivider/VerticalDivider';
 
 import './StyleMenu.css';
@@ -31,6 +32,8 @@ class StyleMenu extends Component {
 				<HeadingButton4 />
 				<HeadingButton3 />
 				<BlockQuoteButton />
+				<VerticalDivider />
+				<NotesButton />
 			</div>
 		)
 	}

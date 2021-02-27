@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
+import './VerticalDivider.css';
+
 function VerticalDivider() {
 	return (
-		<div className='VerticalDivider'>
-		</div>
+		<div className='VerticalDivider'></div>
 	)
 }
 
