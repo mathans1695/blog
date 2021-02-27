@@ -7,7 +7,7 @@ import {
 	CompositeDecorator
 } from 'draft-js';
 
-import InlineStyleMenu from '.././InlineStyleMenu/InlineStyleMenu';
+import StyleMenu from '.././StyleMenu/StyleMenu';
 
 import './DraftEditor.css';
 
@@ -25,14 +25,24 @@ class DraftEditor extends Component {
 			editorState: EditorState.createEmpty(compositeDecorator)
 		}
 		
-		this.onChange = (editorState) => this.setState({editorState});
+		this.onChange = (editorState) => {
+			this.setState({editorState}, () => {
+				setTimeout(() => this.focus(), 0);
+			})
+		};
 		this.toggleInlineStyle = this.toggleInlineStyle.bind(this);
 		this.handleKeyCommand = this.handleKeyCommand.bind(this);
 		this.applyEntity = this.applyEntity.bind(this);
+		this.setDomEditorRef = ref => this.domEditor = ref;
+		this.focus = () => this.domEditor.focus();
+	}
+	
+	componentDidMount() {
+		this.domEditor.focus();
 	}
 	
 	toggleInlineStyle(e) {
-		const command = e.target.getAttribute('data-command');
+		const command = e.target.getAttribute('data-action');
 		
 		const newState = RichUtils.toggleInlineStyle(this.state.editorState, command);
 		
@@ -67,17 +77,17 @@ class DraftEditor extends Component {
 	render() {
 		return (
 			<div className='DraftEditor'>
-				<InlineStyleMenu 
-					toggleInlineStyle={this.toggleInlineStyle}
-					applyEntity={this.applyEntity}
-				/>
 				<div className='DraftEditor__editor'>
 					<Editor 
 						editorState={this.state.editorState}
 						onChange={this.onChange}
 						handleKeyCommand={this.handleKeyCommand}
+						ref={this.setDomEditorRef}
 					/>
 				</div>
+				<StyleMenu 
+					toggleInlineStyle={this.toggleInlineStyle}
+				/>
 			</div>
 		)
 	}
