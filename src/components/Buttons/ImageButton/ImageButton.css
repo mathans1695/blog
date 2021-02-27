@@ -1,0 +1,22 @@
+.ImageButton {
+	width: 32px;
+	height: 32px;
+	padding: 5px 6px 7px 6px;
+	margin-left: 6px;
+	
+	border: 1px solid black;
+	border-radius: 50%;
+	outline: 0;
+	
+	background-color: white;
+	
+	transition: transform 0.1s;
+}
+
+.ImageButton__after {
+	transform: scale(1);
+}
+
+.ImageButton__before {
+	transform: scale(0);
+}

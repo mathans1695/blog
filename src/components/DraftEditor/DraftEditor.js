@@ -8,6 +8,7 @@ import {
 } from 'draft-js';
 
 import TopToolbar from '.././Toolbar/TopToolbar/TopToolbar';
+import SideToolbar from '.././Toolbar/SideToolbar/SideToolbar';
 
 import './DraftEditor.css';
 
@@ -88,6 +89,7 @@ class DraftEditor extends Component {
 				<TopToolbar 
 					toggleInlineStyle={this.toggleInlineStyle}
 				/>
+				<SideToolbar />
 			</div>
 		)
 	}

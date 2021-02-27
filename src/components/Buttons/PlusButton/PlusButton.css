@@ -1,0 +1,17 @@
+.PlusButton {
+	width: 32px;
+	height: 32px;
+	padding: 6px;
+	margin-right: 15px;
+	
+	border: 1px solid black;
+	border-radius: 50%;
+	outline: 0;
+	
+	background-color: white;
+}
+
+.PlusButton__open {
+	transform: rotate(45deg);
+	transition: transform 0.2s;
+}
