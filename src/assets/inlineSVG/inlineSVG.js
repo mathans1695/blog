@@ -176,10 +176,6 @@ export const divider = {
 			viewBox="0 0 492 492"
 			className='SideToolbarStyle__svg'
 		>
-			<path 
-		<svg
-			viewBox="0 0 492 492"
-		>
 			<path
 				d="M465.1 207.6H26.9C12.1 207.6 0 219.7 0 234.5v22.8c0 14.8 12.1 27.1 26.9 27.1h438.2c14.8 0 26.9-12.3 26.9-27.1V234.5C492 219.7 479.9 207.6 465.1 207.6z"
 			/>
