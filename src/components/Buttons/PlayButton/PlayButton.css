@@ -1,0 +1,22 @@
+.PlayButton {
+	width: 32px;
+	height: 32px;
+	padding: 6px 4px 6px 8px;
+	margin-left: 6px;
+	
+	border: 1px solid black;
+	border-radius: 50%;
+	outline: 0;
+	
+	background-color: white;
+	
+	transition: transform 0.3s;
+}
+
+.PlayButton__after {
+	transform: scale(1);
+}
+
+.PlayButton__before {
+	transform: scale(0);
+}
