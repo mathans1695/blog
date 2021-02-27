@@ -1,20 +1,19 @@
 import React from 'react';
 
+import { determineClassName } from './helper/determineClassName';
+
 import './SVGLogoContainer.css';
 
 function SVGLogoContainer(props) {
-	const { svg, isActive, action, addClass } = props;
-	const defaultClassName = (
-		addClass
-			? 'SVGLogoContainer SVGLogoContainer--bgWhite'
-			: 'SVGLogoContainer'
-	)
+	const { 
+		svg,
+		isActive,
+		action,
+		changeBackground,
+		toolbar
+	} = props;
 	
-	const className = (
-		isActive 
-			? `${defaultClassName} SVGLogoContainer__active`
-			: defaultClassName
-	)
+	const className = determineClassName(toolbar, changeBackground, isActive);
 	
 	return (
 		<div 

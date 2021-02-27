@@ -34,6 +34,7 @@ class ItalicButton extends Component {
 					svg={italic.svgsrc} 
 					isActive={this.state.isActive}
 					action='ITALIC'
+					toolbar="top"
 				/>
 			</button>
 		)

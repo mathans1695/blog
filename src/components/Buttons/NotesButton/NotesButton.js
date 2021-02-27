@@ -33,7 +33,8 @@ class NotesButton extends Component {
 					svg={notes.svgsrc}
 					isActive={this.state.isActive}
 					action='notes'
-					addClass={true}
+					toolbar="top"
+					changeBackground={true}
 				/>
 			</button>
 		)

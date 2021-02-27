@@ -33,6 +33,7 @@ class BlockQuoteButton extends Component {
 					svg={blockquote.svgsrc}
 					isActive={this.state.isActive}
 					action='blockquote'
+					toolbar="top"
 				/>
 			</button>
 		)

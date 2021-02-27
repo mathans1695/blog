@@ -34,6 +34,7 @@ class BoldButton extends Component {
 					svg={bold.svgsrc} 
 					isActive={this.state.isActive}
 					action='BOLD'
+					toolbar="top"
 				/>
 			</button>
 		)

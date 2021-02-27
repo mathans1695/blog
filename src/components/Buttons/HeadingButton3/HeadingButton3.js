@@ -33,6 +33,7 @@ class HeadingButton3 extends Component {
 					svg={heading_3.svgsrc}
 					isActive={this.state.isActive}
 					action='heading-three'
+					toolbar="top"
 				/>
 			</button>
 		)
