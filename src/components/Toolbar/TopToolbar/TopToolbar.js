@@ -34,6 +34,7 @@ class TopToolbar extends Component {
 				<BlockQuoteButton />
 				<VerticalDivider />
 				<NotesButton />
+				<div className='TopToolbar__arrow'></div>
 			</div>
 		)
 	}
