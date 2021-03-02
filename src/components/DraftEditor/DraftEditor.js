@@ -23,11 +23,7 @@ class DraftEditor extends Component {
 			editorState: EditorState.createEmpty(compositeDecorator)
 		}
 		
-		this.onChange = (editorState) => {
-			this.setState({editorState}, () => {
-				setTimeout(() => this.focus(), 0);
-			})
-		};
+		this.onChange = this.onChange.bind(this);
 		this.toggleInlineStyle = this.toggleInlineStyle.bind(this);
 		this.handleKeyCommand = this.handleKeyCommand.bind(this);
 		this.applyEntity = this.applyEntity.bind(this);
@@ -37,6 +33,10 @@ class DraftEditor extends Component {
 	
 	componentDidMount() {
 		this.domEditor.focus();
+	}
+	
+	onChange(editorState) {
+		this.setState({editorState});
 	}
 	
 	toggleInlineStyle(e) {
@@ -75,14 +75,12 @@ class DraftEditor extends Component {
 	render() {
 		return (
 			<div className='DraftEditor'>
-				<div className='DraftEditor__editor'>
-					<Editor 
-						editorState={this.state.editorState}
-						onChange={this.onChange}
-						handleKeyCommand={this.handleKeyCommand}
-						ref={this.setDomEditorRef}
-					/>
-				</div>
+				<Editor 
+					editorState={this.state.editorState}
+					onChange={this.onChange}
+					handleKeyCommand={this.handleKeyCommand}
+					ref={this.setDomEditorRef}
+				/>
 			</div>
 		)
 	}

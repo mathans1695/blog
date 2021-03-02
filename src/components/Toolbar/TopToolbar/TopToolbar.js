@@ -16,16 +16,30 @@ class TopToolbar extends Component {
 		super(props);
 	}
 	
+	componentDidUpdate() {
+		const { x, y } = this.props;
+		const topToolbar = document.querySelector('.TopToolbar');
+		
+		topToolbar.style.setProperty('--left', x+'px');
+		topToolbar.style.setProperty('--top', y+'px');
+	}
+	
 	render() {
-		const { toggleInlineStyle } = this.props;
+		const { showTopToolbar } = this.props;
+		
+		const className = (
+			showTopToolbar
+			? 'TopToolbar'
+			: 'TopToolbar TopToolbar__hide'
+		)
 		
 		return (
-			<div className='TopToolbar'>
+			<div className={className}>
 				<BoldButton 
-					toggleInlineStyle={toggleInlineStyle}
+					
 				/>
 				<ItalicButton 
-					toggleInlineStyle={toggleInlineStyle}
+					
 				/>
 				<LinkEntityButton />
 				<VerticalDivider />
